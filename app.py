@@ -7,10 +7,10 @@ from parsing_data import process_and_save_data
 # 새 TXT to Excel 스크립트 임포트
 from txt_to_xlsx import parse_and_save_to_excel_flexible_pos_v3
 
-st.set_page_config(page_title="New Voca 데이터화를 위한 파일 변환기", layout="centered")
+st.set_page_config(page_title="New Voca", layout="centered")
 
-st.title("txt 파일 형식 변환기")
-st.write("원하는 변환 기능을 선택하여 파일을 업로드하고 처리하세요.")
+st.title("txt 파일 변환기")
+st.write("아래의 기능을 통해 원본 데이터 전처리와 엑셀 파일 변환이 가능합니다.")
 
 # --- 탭을 사용하여 기능 구분 ---
 tab1, tab2 = st.tabs(["1차 전처리", "최종 xlsx 파일 생성"])
