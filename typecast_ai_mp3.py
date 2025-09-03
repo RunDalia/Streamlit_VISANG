@@ -72,6 +72,7 @@ with tab2:
       - I was disappointed with the chef’s dish.
     """
     st.write(code_block)
+    st.write("+) 이름 옆의 '(NR)' 표시는 Natural Readers에서 추출한 음성입니다.")
 
 
     # 두 번째 탭을 위한 별도 음원 폴더 경로 (이름을 적절히 변경하여 사용하세요)
