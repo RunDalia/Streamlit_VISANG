@@ -56,7 +56,7 @@ with tab1:
 # --- 두 번째 탭: View Plus AI 음원 목록 ---
 with tab2:
     st.header("View Plus AI 음원 목록")
-    st.write("다양한 AI 목소리를 들어보세요. 문장은 아래를 참고해주세요.")
+    st.write("다양한 AI 목소리를 들어보세요. 단어 및 문장은 아래를 참고해주세요.")
     code_block = """
     ```markdown
     ▫️photographer
