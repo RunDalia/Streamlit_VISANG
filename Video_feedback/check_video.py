@@ -54,7 +54,7 @@ def save_feedback(video_url, feedback_text):
         with open("feedback.txt", "a", encoding="utf-8") as f:
             f.write(f"{video_url}: {feedback_text}\n")
         st.success(f"피드백이 저장되었습니다.")
-        st.experimental_rerun()  # 화면 새로고침
+        st.rerun()  # 화면 새로고침
 
 cols = st.columns(2)
 for idx, v in enumerate(videos):
@@ -76,3 +76,4 @@ if st.session_state.feedbacks:
         st.info(f"**{video_name}**에 대한 피드백: {fb['feedback']}")
 else:
     st.info("아직 저장된 피드백이 없습니다.")
+
