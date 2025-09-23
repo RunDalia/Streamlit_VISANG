@@ -38,14 +38,41 @@ videos = [
 
 ]
 
+# st.session_state에 'feedbacks' 리스트가 없으면 초기화
+if 'feedbacks' not in st.session_state:
+    st.session_state.feedbacks = []
+
+# 피드백을 저장하고 화면에 표시하는 함수
+def save_feedback(video_url, feedback_text):
+    # 피드백이 빈 문자열이 아닐 경우에만 저장
+    if feedback_text:
+        st.session_state.feedbacks.append({
+            "video_url": video_url,
+            "feedback": feedback_text
+        })
+        # feedback.txt 파일에 피드백 추가 저장
+        with open("feedback.txt", "a", encoding="utf-8") as f:
+            f.write(f"{video_url}: {feedback_text}\n")
+        st.success(f"피드백이 저장되었습니다.")
+        st.experimental_rerun()  # 화면 새로고침
+
 cols = st.columns(2)
 for idx, v in enumerate(videos):
     with cols[idx % 2]:
         st.subheader(os.path.basename(v))
         st.video(v)
+        
+        feedback = st.text_area(f"💬 피드백 입력", key=f"text_area_{v}")
+        if st.button(f"send", key=f"btn_{v}", on_click=save_feedback, args=(v, feedback)):
+            pass
 
-        feedback = st.text_area(f"💬 피드백 입력", key=v)
-        if st.button(f"send", key=f"btn_{v}"):
-            with open("feedback.txt", "a", encoding="utf-8") as f:
-                f.write(f"{v}: {feedback}\n")
-            st.success(f"{v} 피드백이 저장되었습니다.")
+st.markdown("---")
+st.header("저장된 피드백 목록")
+
+# 저장된 피드백들을 화면에 표시
+if st.session_state.feedbacks:
+    for fb in st.session_state.feedbacks:
+        video_name = os.path.basename(fb["video_url"])
+        st.info(f"**{video_name}**에 대한 피드백: {fb['feedback']}")
+else:
+    st.info("아직 저장된 피드백이 없습니다.")
