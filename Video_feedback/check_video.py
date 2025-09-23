@@ -61,19 +61,5 @@ for idx, v in enumerate(videos):
     with cols[idx % 2]:
         st.subheader(os.path.basename(v))
         st.video(v)
-        
-        feedback = st.text_area(f"💬 피드백 입력", key=f"text_area_{v}")
-        if st.button(f"send", key=f"btn_{v}", on_click=save_feedback, args=(v, feedback)):
-            pass
 
-st.markdown("---")
-st.header("저장된 피드백 목록")
-
-# 저장된 피드백들을 화면에 표시
-if st.session_state.feedbacks:
-    for fb in st.session_state.feedbacks:
-        video_name = os.path.basename(fb["video_url"])
-        st.info(f"**{video_name}**에 대한 피드백: {fb['feedback']}")
-else:
-    st.info("아직 저장된 피드백이 없습니다.")
 
