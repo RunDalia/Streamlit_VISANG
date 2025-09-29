@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 
-st.set_page_config(page_title="팀 영상 리뷰", layout="wide")
+st.set_page_config(page_title="예비 초등 따라쓰기 영상 모아보기", layout="wide")
 st.title("🎬 따라쓰기 영상 피드백")
 
 # 클라우드 영상 URL 리스트
@@ -61,6 +61,7 @@ for idx, v in enumerate(videos):
     with cols[idx % 2]:
         st.subheader(os.path.basename(v))
         st.video(v)
+
 
 
 
