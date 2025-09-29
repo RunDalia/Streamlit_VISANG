@@ -6,35 +6,35 @@ st.title("🎬 따라쓰기 영상 피드백")
 
 # 클라우드 영상 URL 리스트
 videos = [
-    "https://felcms.allviacms.com/fileRoot/question/temp/a.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/b.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/c.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/d.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/d1.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/e.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/f.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/g.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/h.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/i.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/j.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/J1.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/k.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/L.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/m.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/n.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/o.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/p.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/q.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/r.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/s.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/t.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/t1.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/u.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/v.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/w.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/x.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/y.mp4",
-    "https://felcms.allviacms.com/fileRoot/question/temp/z.mp4"
+    "https://felcms.allviacms.com/fileRoot/question/temp/a_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/b_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/c_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/d_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/d1_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/e_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/f_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/g_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/h_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/i_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/j_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/J1_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/k_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/L_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/m_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/n_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/o_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/p_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/q_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/r_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/s_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/t_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/t1_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/u_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/v_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/w_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/x_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/y_FN.mp4",
+    "https://felcms.allviacms.com/fileRoot/question/temp/z_FN.mp4"
 
 ]
 
@@ -61,5 +61,6 @@ for idx, v in enumerate(videos):
     with cols[idx % 2]:
         st.subheader(os.path.basename(v))
         st.video(v)
+
 
 
